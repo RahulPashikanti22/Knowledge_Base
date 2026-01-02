@@ -1,0 +1,5 @@
+i am docker file for Helm
+FROM alpine:latest
+RUN apk --no-cache add curl bash
+RUN curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+ENTRYPOINT ["helm"]
